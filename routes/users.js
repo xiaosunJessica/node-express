@@ -9,8 +9,9 @@ router.get('/', function(req, res, next) {
 });
 
 /* add user. */
-router.get('/addUser', function(req, res, next) {
-	userDao.add(req, res, next);
+router.get('/addUser', async (req, res, next) => {
+	const  user = req.query;
+	const [err, value] = await userDao.add(user);
 });
 
 module.exports = router;

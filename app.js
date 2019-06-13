@@ -4,10 +4,6 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-const mysql = require('mysql');
-const dbConfig = require('./config/DBConfig');
-
-const pool = mysql.createPool(dbConfig.mysql);
 
 
 const index = require('./routes/index');
